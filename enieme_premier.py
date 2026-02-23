@@ -13,9 +13,9 @@
 #                                                               #
 #                                                               #
 # Mises-à-jour :                                                #
-#  1.3.5 Version initiale. Copie et mise-a-jour pour Linux de   #
+#  1.3.5 Version initiale. Copie et mise-à-jour pour Linux de   #
 #  la version pour Windows.                                     #
-#  1.4.0 Réduit le nombre de valeurs a tester.                  #
+#  1.4.0 Réduit le nombre de valeurs à tester.                  #
 #  1.4.1 Réarrange les declarations de variables.               #
 #  1.4.2 Conversion en Python                                   #
 #  1.5.0 Mise-à-jour pour Python 3                              #
@@ -29,6 +29,7 @@
 from time import localtime 
 from math import sqrt
 from datetime import datetime
+from sys import argv
 
 ### Functions
 
@@ -52,7 +53,10 @@ premiers = [2,3,5,7]
 i = 3
 c = gen_candidat()
 
-numero = int(input("Quel nombre premier voulez-vous ? Le numéro : "))
+if len(argv)>1:
+    numero = int(argv[1])
+else:
+    numero = int(input("Quel nombre premier voulez-vous ? Le numéro : "))
 
 time = datetime.now()
 time1 = 3600*time.hour + 60*time.minute + time.second
