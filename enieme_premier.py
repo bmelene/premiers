@@ -85,12 +85,12 @@ time = datetime.now()
 time2 = 3600*time.hour + 60*time.minute + time.second
 secondes = time2 - time1
 
-print("\nLe",numero,"ème nombre premier est",premiers[numero-1])
-print("Nombre de tests :",nb_test)
-print("Temps (s) =",secondes)
+print(f"\nLe {numero}ème nombre premier est {premiers[numero-1]}")
+print(f"Nombre de tests : {nb_test}")
+print(f"Temps (s) = {secondes}")
 
-if (secondes != 0):
+if (secondes):
     testsec = round(nb_test / secondes)
-    print("Tests/s :",testsec)
+    print(f"Tests/s : {testsec}")
 
 
